@@ -72,15 +72,8 @@ gameGrid.forEach(item => {
 
  const back = document.createElement('div');
  back.classList.add('back');
- 
- back.style.backgroundImage = HTMLOptGroupElement;
  grid.appendChild(card);
  card.appendChild(front);
  card.appendChild(back);
 });
-const match = () => {
- const selected = document.querySelectorAll('.selected');
- selected.forEach(card => {
-   card.classList.add('match');
- });
-};
+
