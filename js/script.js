@@ -1,51 +1,39 @@
 // Card data
 const cardsArray = [
     {
-      name: 'orange',
-      img: 'https://i.imgur.com/ub7GfTO.png',
+      'name': 'banana',
+      'img': 'img/banana.png',
     },
     {
-      name: 'star',
-      img: 'img/star.png',
+      'name': 'rock',
+      'img': 'img/rock.png',
     },
     {
-      name: 'bobomb',
-      img: 'img/bobomb.png',
+      'name': 'burger',
+      'img': 'img/burger.png',
     },
     {
-      name: 'mario',
-      img: 'img/mario.png',
+      'name': 'pizza',
+      'img': 'img/pizza.png',
     },
     {
-      name: 'luigi',
-      img: 'img/luigi.png',
+      'name': 'peach',
+      'img': 'img/peach.png',
     },
     {
-      name: 'peach',
-      img: 'img/peach.png',
+      'name': 'lettuce',
+      'img': 'img/lettuce.png',
     },
     {
-      name: '1up',
-      img: 'img/1up.png',
+      'name': 'beer',
+      'img': 'img/beer.png',
     },
     {
-      name: 'mushroom',
-      img: 'img/mushroom.png',
+      'name': 'nike',
+      'img': 'img/nike.png',
     },
-    {
-      name: 'thwomp',
-      img: 'img/thwomp.png',
-    },
-    {
-      name: 'bulletbill',
-      img: 'img/bulletbill.png',
-    },
-    {
-      name: 'coin',
-      img: 'img/coin.png',
-    },
-    {
-      name: 'goomba',
-      img: 'img/goomba.png',
-    },
-  ]
+];
+const gameGrid = cardsArray
+ .concat(cardsArray)
+ .sort(() => 0.5 - Math.random());
+
