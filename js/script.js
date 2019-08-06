@@ -1,53 +1,59 @@
-const cardArrays = [ 
+/*
+  red: #FF5733  
+*/
+
+const cards = [ 
   {
-    'name': 'banana',
-    'img':'img/banana.png',
+    'name': 'orange',
+    'color': 'orange',
   },
   {
     'name': 'orange',
-    'img': 'img/orange.png',
-  },{
-    'name': 'kiwi',
-    'img': 'img/kiwi.png',
-  },{
-    'name': 'watermelon',
-    'img': 'img/watermelon.png',
+    'color': 'orange',
   },
   {
-    'name': 'eggplant',
-    'img': 'img/eggplant.png',
+    'name': 'blue',
+    'color': 'blue',
   },
   {
-    'name': 'rock',
-    'img': 'img/rock.png',
+    'name': 'blue',
+    'color': 'blue',
   },
   {
-    'name': 'burger',
-    'img': 'img/hamburger.png',
+    'name': 'red',
+    'color': 'red',
   },
   {
-    'name': 'pizza',
-    'img': 'img/pizza.png',
+    'name': 'red',
+    'color': 'red',
   },
   {
-    'name': 'peach',
-    'img': 'img/peach.png',
+    'name': 'purple',
+    'color': 'purple',
   },
   {
-    'name': 'lettuce',
-    'img': 'img/lettuce.png',
+    'name': 'purple',
+    'color': 'purple',
   },
   {
-    'name': 'beer',
-    'img': 'img/beer.png',
+    'name': 'gray',
+    'color': 'gray',
   },
   {
-    'name': 'img/nike',
-    'img': 'img/nike.png',
+    'name': 'gray',
+    'color': 'gray',
   },
+  {
+    'name': 'yellow',
+    'color': 'yellow',
+  },
+  {
+    'name': 'yellow',
+    'color': 'yellow',
+  }
 ];
 
-const gameGrid = cardArrays;
+const gameGrid = cards;
 
 let firstGuess = '';
 let secondGuess = '';
@@ -60,10 +66,12 @@ const grid = document.createElement('section');
 grid.setAttribute('class', 'grid');
 game.appendChild(grid);
 
+
 gameGrid.forEach(item => {
- const { name, img } = item;
+ const { name, color } = item;
 
  const card = document.createElement('div');
+ card.setAttribute('id', `${name}`)
  card.classList.add('card');
  card.dataset.name = name;
 
@@ -72,54 +80,54 @@ gameGrid.forEach(item => {
 
  const back = document.createElement('div');
  back.classList.add('back');
+ back.style.background = color;
  grid.appendChild(card);
  card.appendChild(front);
  card.appendChild(back);
 });
 const match = () => {
-  const selected = document.querySelectorAll('.selected');
-  selected.forEach(card => {
-    card.classList.add('match');
-  });
- };
- const resetGuesses = () => {
-  firstGuess = '';
-  secondGuess = '';
-  count = 0;
-  previousTarget = null;
-  var selected = document.querySelectorAll('.selected');
-  selected.forEach(card => {
-    card.classList.remove('selected');
-  });
- };
- grid.addEventListener('click', event => {
-  const clicked = event.target;
-  if (
-    clicked.nodeName === 'SECTION' ||
-    clicked === previousTarget ||
-    clicked.parentNode.classList.contains('selected') ||
-    clicked.parentNode.classList.contains('match')
-  ) {
-    return;
-  }
-  if (count < 2) {
-    count++;
-    if (count === 1) {
-      firstGuess = clicked.parentNode.dataset.name;
-      console.log(firstGuess);
-      clicked.parentNode.classList.add('selected');
-    } else {
-      secondGuess = clicked.parentNode.dataset.name;
-      console.log(secondGuess);
-      clicked.parentNode.classList.add('selected');
-    }
-    if (firstGuess && secondGuess) {
-      if (firstGuess === secondGuess) {
-        setTimeout(match, delay);
-      }
-      setTimeout(resetGuesses, delay);
-    }
-    previousTarget = clicked;
-  }
+ const selected = document.querySelectorAll('.selected');
+ selected.forEach(card => {
+   card.classList.add('match');
  });
-
+};
+const resetGuesses = () => {
+ firstGuess = '';
+ secondGuess = '';
+ count = 0;
+ previousTarget = null;
+ var selected = document.querySelectorAll('.selected');
+ selected.forEach(card => {
+   card.classList.remove('selected');
+ });
+};
+grid.addEventListener('click', event => {
+ const clicked = event.target;
+ if (
+   clicked.nodeName === 'section' ||
+   clicked === previousTarget ||
+   clicked.parentNode.classList.contains('selected') ||
+   clicked.parentNode.classList.contains('match')
+ ) {
+   return;
+ }
+ if (count < 2) {
+   count++;
+   if (count === 1) {
+     firstGuess = clicked.parentNode.dataset.name;
+     console.log(firstGuess);
+     clicked.parentNode.classList.add('selected');
+   } else {
+     secondGuess = clicked.parentNode.dataset.name;
+     console.log(secondGuess);
+     clicked.parentNode.classList.add('selected');
+   }
+   if (firstGuess && secondGuess) {
+     if (firstGuess === secondGuess) {
+       setTimeout(match, delay);
+     }
+     setTimeout(resetGuesses, delay);
+   }
+   previousTarget = clicked;
+ }
+});
