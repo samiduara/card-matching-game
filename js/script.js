@@ -51,7 +51,31 @@ const cards = [
   {
     'name': 'yellow',
     'color': 'yellow',
-  }
+  },
+  {
+    'name': 'brown',
+    'color':'brown',
+  },
+  {
+    'name': 'brown',
+    'color':'brown',
+  },
+  {
+    'name': 'pink',
+    'color':'pink',
+  },
+  {
+    'name': 'pink',
+    'color':'pink',
+  },
+  {
+    'name': 'aqua',
+    'color':'aqua',
+  },
+  {
+    'name': 'aqua',
+    'color':'aqua',
+  },
 ];
 
 let firstGuess = '';

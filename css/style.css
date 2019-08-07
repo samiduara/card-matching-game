@@ -8,8 +8,8 @@
 body {
  margin: 20px 0;
  border: blue;
- background: rgb(204, 45, 23);
- border: black;
+ background: rgb(241, 33, 5);
+ 
  }
  header {
  text-align: center;
@@ -20,7 +20,7 @@ body {
 
  footer {
          text-align: center;
-         font-size-adjust: inherit; color: aqua;
+         font-size-adjust: inherit; color: aqua;block-size: initial
          
          
  }
@@ -31,7 +31,7 @@ body {
  display: -webkit-box;
  display: -ms-flexbox;
  display: flex;
- border: black;
+ border: rgb(102, 17, 17);
  
  
  -ms-flex-wrap: wrap;
@@ -48,6 +48,7 @@ body {
  -webkit-transform-style: preserve-3d;
          transform-style: preserve-3d;
  margin: 5px;
+ border: black;
 }
 .card,
 .back,
