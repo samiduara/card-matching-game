@@ -3,17 +3,37 @@
 *::after {
  -webkit-box-sizing: border-box;
  box-sizing: border-box;
+ 
 }
 body {
  margin: 20px 0;
+ border: blue;
  background: rgb(204, 45, 23);
-}
+ border: black;
+ }
+ header {
+ text-align: center;
+ border: black
+
+
+ }
+
+ footer {
+         text-align: center;
+         font-size-adjust: inherit; color: aqua;
+         
+         
+ }
+
 .grid {
  max-width: 960px;
  margin: 0 auto;
  display: -webkit-box;
  display: -ms-flexbox;
  display: flex;
+ border: black;
+ 
+ 
  -ms-flex-wrap: wrap;
      flex-wrap: wrap;
  -webkit-box-pack: space-evenly;
@@ -43,6 +63,7 @@ body {
 }
 .front {
  background: rgb(66, 250, 75);
+ border: black;
 }
 .back {
  -webkit-transform: rotateY(180deg);
@@ -57,5 +78,6 @@ body {
          transform: rotateY(180deg);
 }
 .match .front {
- background:rgb(249, 101, 229);;
-}
+ background:rgb(249, 101, 229);
+ 
+};

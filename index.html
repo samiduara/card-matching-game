@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Card Matching Game</title>
+  <title>Memory Game</title>
    <meta charset="urf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -8,16 +8,20 @@
    <link rel="stylesheet" href="css/style.css" />
    <script defer src="js/script.js"></script>
  </head>
- <header><h1>CardMatchingGame</h1></header>
+ <header><h1>MEMORY-GAME</h1></header>
  <body>
    <div id="game"></div>
-
-<button onclick="startGame(myFunction, reset);">START</button>
-<script>
-function myFunction() {
- alert('GAME OVER !!!!!');
-}
-</script>
-
+<footer>Memory Game By Sam Gathoni</footer>
+<footer><button>Reset</button></footer>
   </body>
 </html>
+
+<!-- Let's transfer functionality for our reset button to our javascript
+
+  1) Add an event listener to our button, so that when clicked it calls a functon
+  2) We'll create a function for our button that gets called when the button
+  is clicked -  we'll call it handleReset()
+
+  What should handleReset do? We want it to restart the game
+
+-->

@@ -5,8 +5,9 @@
 const cards = [ 
   {
     'name': 'orange',
-    'color': 'orange',
+    'color':'orange',
   },
+  
   {
     'name': 'orange',
     'color': 'orange',
@@ -20,20 +21,20 @@ const cards = [
     'color': 'blue',
   },
   {
-    'name': 'red',
-    'color': 'red',
-  },
-  {
-    'name': 'red',
-    'color': 'red',
-  },
-  {
     'name': 'purple',
     'color': 'purple',
   },
   {
     'name': 'purple',
     'color': 'purple',
+  },
+  {
+    'name': 'black',
+    'color': 'black',
+  },
+  {
+    'name': 'black',
+    'color': 'black',
   },
   {
     'name': 'gray',
@@ -57,8 +58,9 @@ let firstGuess = '';
 let secondGuess = '';
 let count = 0;
 let previousTarget = null;
-let delay = 1200;
+let delay = 1000;
 let shuffledArr = [];
+
 
 const game = document.getElementById('game');
 const grid = document.createElement('section');
@@ -109,6 +111,19 @@ const resetGuesses = () => {
    card.classList.remove('selected');
  });
 };
+
+// Event listeners
+
+// Reset button
+document.querySelector('button').addEventListener('click', handleReset);
+
+function handleReset() {
+  window.location.reload(); // Not the best way to rest the game, but this will work for the time being
+}
+
+
+
+
 grid.addEventListener('click', event => {
  const clicked = event.target;
  if (
@@ -135,7 +150,7 @@ grid.addEventListener('click', event => {
        setTimeout(match, delay);
      }
      setTimeout(resetGuesses, delay);
-   }
-   previousTarget = clicked;
- }
-});
+    }
+    previousTarget = clicked;
+  }
+ });
