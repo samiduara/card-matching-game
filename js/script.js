@@ -53,13 +53,12 @@ const cards = [
   }
 ];
 
-const gameGrid = cards;
-
 let firstGuess = '';
 let secondGuess = '';
 let count = 0;
 let previousTarget = null;
 let delay = 1200;
+let shuffledArr = [];
 
 const game = document.getElementById('game');
 const grid = document.createElement('section');
@@ -67,7 +66,16 @@ grid.setAttribute('class', 'grid');
 game.appendChild(grid);
 
 
-gameGrid.forEach(item => {
+// make function to shuffle array, that will return a new array
+
+function shuffleDeck(array) {
+  shuffledArr = array.sort(() => Math.random() - .5);
+  return shuffledArr
+}
+
+shuffleDeck(cards)
+
+shuffledArr.forEach(item => {
  const { name, color } = item;
 
  const card = document.createElement('div');
