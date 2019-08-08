@@ -8,20 +8,24 @@
 body {
  margin: 20px 0;
  border: blue;
- background: rgb(241, 33, 5);
+ background: rgb(248, 4, 4);
+ 
+ 
  
  }
  header {
- text-align: center;
- border: black
-
+ text-align: center;font-style: serif;color: rgb(42, 21, 233);
+ border: rgb(74, 122, 226);
+ 
 
  }
 
  footer {
          text-align: center;
-         font-size-adjust: inherit; color: aqua;block-size: initial
+         font-size-adjust: inherit; color:white;block-size: initial;
+         background : color blue;
          
+        
          
  }
 
@@ -31,7 +35,7 @@ body {
  display: -webkit-box;
  display: -ms-flexbox;
  display: flex;
- border: rgb(102, 17, 17);
+ border: rgba(253, 6, 220, 0.192);
  
  
  -ms-flex-wrap: wrap;
@@ -81,4 +85,11 @@ body {
 .match .front {
  background:rgb(249, 101, 229);
  
+};
+
+button {
+background-color: blue;
+width: 600;
+height: 50px;
+border: rgba(0, 0, 255, 0.801);
 };
