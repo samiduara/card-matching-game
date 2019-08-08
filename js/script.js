@@ -78,8 +78,8 @@ const cards = [
   },
 ];
 
-let firstGuess = '1';
-let secondGuess = '2';
+let firstGuess = '0';
+let secondGuess = '0';
 let count = 0;
 let previousTarget = null;
 let delay = 1000;
