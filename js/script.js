@@ -82,7 +82,7 @@ let firstGuess = '0';
 let secondGuess = '0';
 let count = 0;
 let previousTarget = null;
-let delay = 1000;
+let delay = 1300;
 let shuffledArr = [];
 
 
@@ -145,7 +145,19 @@ function handleReset() {
   window.location.reload(); // Not the best way to rest the game, but this will work for the time being
 }
 
+function timedText() {
+  var x = document.getElementById("txt");
+  setTimeout(function(){ x.value="2 seconds" }, 2000);
+  setTimeout(function(){ x.value="4 seconds" }, 4000);
+  setTimeout(function(){ x.value="6 seconds" }, 6000);
+}
 
+// Event listeners
+
+// timer button
+
+
+  setTimeout(function(){ alert("If all colors are matched you are a WINNER. Otherwise play again LOOSER !!!!!!!"); }, 30000)
 
 
 grid.addEventListener('click', event => {
